@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImg from "@/public/img/furniture/hero.avif";
+import Button from "./Button";
 function Hero() {
   return (
     <div
@@ -17,12 +18,8 @@ function Hero() {
             pieces that embody style, comfort, and quality craftsmanship.
           </p>
           <div className="flex gap-3">
-            <button className="bg-[#689a37] hover:bg-green-700 text-white font-bold py-3 px-10 rounded-full">
-              Buy Now
-            </button>
-            <button className="border text-[#689a37] border-[#689a37] hover:bg-green-700 hover:text-white font-bold py-3 px-10 rounded-full">
-              Explore
-            </button>
+            <Button text="Buy Now" type="fill"/>
+            <Button text="Explore"/>
           </div>
         </div>
       </div>
