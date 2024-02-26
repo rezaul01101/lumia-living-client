@@ -5,6 +5,8 @@ import p1 from '@/public/img/furniture/p1.avif'
 import p2 from '@/public/img/furniture/p2.avif'
 import p3 from '@/public/img/furniture/p3.avif'
 import p4 from '@/public/img/furniture/p4.avif'
+import p5 from '@/public/img/furniture/p5.avif'
+import p6 from '@/public/img/furniture/p6.avif'
 export const furniture=[
     {
         "name":"Modern Furniture",
@@ -52,12 +54,12 @@ export const furnitureProduct=[
         "name":"dining table",
         "category":"table",
         "price":"$950.00",
-        "image":p1
+        "image":p5
     },
     {
         "name":"Modern Sofa",
         "category":"Sofa",
         "price":"$380.00",
-        "image":p2
+        "image":p6
     },
 ];
