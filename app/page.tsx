@@ -8,27 +8,27 @@ import footer1 from "@/public/img/footer1.avif";
 import Product from "./components/Product";
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-hidden	">
       <Hero />
       <div className="container mx-auto my-4">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-4">
           {furniture.map((item, index) =>
             index == 0 ? (
               <div
-                className="row-span-2 h-full w-full overflow-hidden rounded-lg bg-cover bg-bottom"
+                className="row-span-2  w-full sm:h-full h-[300px] overflow-hidden rounded-lg bg-cover bg-bottom relative"
                 style={{ backgroundImage: `url('${item.image.src}')` }}
               >
-                <div className="px-10 py-10">
-                  <Button text={item.btn_text} />
-                  <h2 className="font-bold text-4xl my-2">{item.name}</h2>
+                <div className="px-10 py-10 absolute ">
+                  <Button text={item.btn_text} type="fill" />
+                  <h2 className="font-bold text-2xl sm:text-4xl my-2">{item.name}</h2>
                 </div>
               </div>
             ) : (
               <div
-                className="  w-full h-[300px] overflow-hidden rounded-lg bg-cover bg-center"
+                className="  w-full h-[300px] overflow-hidden rounded-lg bg-cover bg-center relative"
                 style={{ backgroundImage: `url('${item.image.src}')` }}
               >
-                <div className="px-7 py-7">
+                <div className="px-7 py-7 ">
                   <Button text={item.btn_text} />
                   <h2 className="font-bold text-3xl my-2">{item.name}</h2>
                 </div>
@@ -41,22 +41,22 @@ export default function Home() {
         <h2 className="text-2xl font-bold pb-4">
           Modern design for any budget
         </h2>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-3 gap-4">
           {furnitureProduct.map((item, index) => (
             <Product item={item} />
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-10 items-center bg-[#f2f6ee] container mx-auto p-4 rounded-lg my-4">
+      <div className="grid sm:grid-cols-2 gap-10 items-center bg-[#f2f6ee] container mx-auto p-4 rounded-lg my-4">
         <div className="">
           <Image
             src={AboutImage}
             alt="about image"
-            className="h-[550px] w-full object-cover rounded-lg"
+            className="sm:h-[550px] h-[300px] w-full object-cover rounded-lg"
           />
         </div>
         <div>
-          <h2 className="capitalize text-4xl font-bold">
+          <h2 className="capitalize sm:text-4xl text-2xl font-bold">
             What's makes us <br /> Different from others
           </h2>
           <p className="py-3">
@@ -69,25 +69,25 @@ export default function Home() {
         </div>
       </div>
       <div
-        className="w-full container mx-auto h-[450px] overflow-hidden rounded bg-cover bg-center pl-5 my-4"
+        className="w-full container mx-auto h-[300px] sm:h-[450px] overflow-hidden rounded bg-cover bg-center pl-5 my-4"
         style={{ backgroundImage: `url('${footer1.src}')` }}
       >
-        <div className="container mx-auto pt-32 pl-4">
+        <div className="container mx-auto sm:pt-32 pt-5 pl-4">
           <div className="w-[45%] py-3 px-3">
-            <h1 className="text-4xl font-bold">
+            <h1 className="sm:text-4xl text-xl  font-bold">
               Transform Your Home <br /> with Our Stylish <br /> Furniture !!!
             </h1>
-            <p className="my-3">
+            <p className="my-3 sm:block hidden">
               Transform your dream space into reality with our exquisite
               furniture collection.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3 sm:pt-0 pt-5">
               <Button text="Buy Now" type="fill" />
             </div>
           </div>
         </div>
       </div>
-      <footer className="w-full bg-black py-5">
+      <footer className="w-full bg-black py-5 hidden sm:block">
         <h2 className="text-4xl font-bold text-white text-center py-4">Lumia Living Furniture</h2>
           <div className="container mx-auto grid items-center justify-center py-4">
             <ul className="text-white flex gap-4 cursor-pointer">
