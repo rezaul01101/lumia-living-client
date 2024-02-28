@@ -1,4 +1,3 @@
-import React from "react";
 import HeroImg from "@/public/img/furniture/hero.avif";
 import Button from "./Button";
 function Hero() {
@@ -18,13 +17,13 @@ function Hero() {
             pieces that embody style, comfort, and quality craftsmanship.
           </p>
           <div className="flex gap-3 justify-center my-5">
-            <Button text="Buy Now" type="fill"/>
-            <Button text="Explore"/>
+            <Button text="Buy Now" type="fill" />
+            <Button text="Explore" />
           </div>
         </div>
       </div>
       <div className="w-7/12 pl-4 pt-4 bg-white rounded-t-lg rounded-r-lg	bottom-0 right-0 h-[130px] absolute z-10	hidden sm:block">
-        <div className="bg-[#689a37] w-full rounded-tl-lg h-full flex items-center justify-evenly text-white">
+        <div className="bg-lumiaPrimary-600 w-full rounded-tl-lg h-full flex items-center justify-evenly text-white">
           <div className="flex gap-4 items-center ">
             <h1 className="text-2xl">975+</h1>
             <p className="text-sm	">

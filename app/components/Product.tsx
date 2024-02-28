@@ -19,7 +19,7 @@ const Product:React.FC<ProductProps> =({item})=>{
         <h2 className="text-4xl text-white font-bold ">{item.price}</h2>
       </div>
       <div className="bg-white w-[70px] h-[70px] rounded-lg absolute bottom-0 right-0 p-2">
-        <div className="bg-[#689a37] w-full h-full rounded-md flex items-center justify-center cursor-pointer">
+        <div className="bg-lumiaPrimary-600 w-full h-full rounded-md flex items-center justify-center cursor-pointer">
           <IoBagHandleOutline className="text-3xl text-white" />
         </div>
       </div>
