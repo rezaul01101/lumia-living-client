@@ -8,7 +8,7 @@ const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
       className="mt-20 w-full h-[200px] bg-lumiaPrimary-600 relative bg-cover bg-center"
       style={{ backgroundImage: `url('${bgPage.src}')` }}
     >
-      <div className=" text-white overlay bg-lumiaPrimary-400 w-full h-[200px] flex items-center justify-center font-bold">
+      <div className=" text-black overlay  w-full h-[200px] flex items-center justify-center font-bold">
         <h1 className="text-4xl uppercase">{title}</h1>
       </div>
     </div>

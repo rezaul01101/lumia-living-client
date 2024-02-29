@@ -5,8 +5,11 @@ import Image from "next/image";
 import { FiHome, FiMail, FiShoppingCart } from "react-icons/fi";
 import { AiOutlineUser, AiOutlineShopping } from "react-icons/ai";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
-function Navbar() {
+const Navbar=()=> {
+  const path=usePathname();
+  console.log(path);
   const menuItems = [
     { id: 1, label: "Home", url: "/" },
     { id: 2, label: "About", url: "/about" },
@@ -30,12 +33,12 @@ function Navbar() {
     >
       <div className="logo flex gap-2 items-center	">
         <Image src={logo} width={60} height={60} alt="logo" />
-        <h4 className="mt-2 font-semibold">LUMIA LIVING FURNITURE</h4>
+        <h4 className="mt-2 font-semibold"><Link href={'/'}>LUMIA LIVING FURNITURE</Link></h4>
       </div>
       <div className="menu">
         <ul className="sm:flex gap-6 mt-2 font-semibold hidden ">
           {menuItems.map((item, index) => (
-            <li className="cursor-pointer ">
+            <li className={`cursor-pointer  ${path == item.url ? "text-lumiaPrimary-600" : ""}`}>
               <Link href={item.url}>{item.label}</Link>
             </li>
           ))}
@@ -46,7 +49,7 @@ function Navbar() {
       </div>
       <div className="sm:hidden fixed bottom-0 left-0 w-full">
         <div className="grid grid-cols-4 w-full bg-white h-[55px] items-center justify-between">
-          <div className="h-[45px] flex flex-col items-center justify-center text-lumiaPrimary-600">
+          <div className={`h-[45px] flex flex-col items-center justify-center  ${path == '/' ? "text-lumiaPrimary-600" : ""}`}>
             <FiHome className="text-[50px]" />
             <p className="text-sm">
               <Link href={"/"}>Home</Link>
@@ -56,13 +59,13 @@ function Navbar() {
             <FiShoppingCart className="text-[50px]" />
             <p className="text-sm">Cart</p>
           </div>
-          <div className="h-[45px] flex flex-col items-center justify-center">
+          <div className={`h-[45px] flex flex-col items-center justify-center ${path == '/furniture' ? "text-lumiaPrimary-600" : ""}`}>
             <AiOutlineShopping className="text-[50px]" />
             <p className="text-sm">
               <Link href={"/furniture"}>Shop</Link>
             </p>
           </div>
-          <div className="h-[45px] flex flex-col items-center justify-center">
+          <div className={`h-[45px] flex flex-col items-center justify-center ${path == '/contact' ? "text-lumiaPrimary-600" : ""}`}>
             <FiMail className="text-[50px]" />
             <p className="text-sm">
               <Link href={"/contact"}>Contact</Link>
