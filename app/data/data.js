@@ -63,3 +63,59 @@ export const furnitureProduct=[
         "image":p6
     },
 ];
+export const Products=[
+    {
+        "name":"dining table",
+        "category":"table",
+        "price":"$950.00",
+        "image":p1
+    },
+    {
+        "name":"Modern Sofa",
+        "category":"Sofa",
+        "price":"$380.00",
+        "image":p2
+    },
+    {
+        "name":"Premium Table",
+        "category":"table",
+        "price":"$120.00",
+        "image":p3
+    },
+    {
+        "name":"Reading Lamp",
+        "category":"Lamp",
+        "price":"$450.00",
+        "image":p4
+    },
+    {
+        "name":"dining table",
+        "category":"table",
+        "price":"$950.00",
+        "image":p5
+    },
+    {
+        "name":"Modern Sofa",
+        "category":"Sofa",
+        "price":"$380.00",
+        "image":p6
+    },
+    {
+        "name":"dining table",
+        "category":"table",
+        "price":"$950.00",
+        "image":p1
+    },
+    {
+        "name":"Premium Table",
+        "category":"table",
+        "price":"$120.00",
+        "image":p3
+    },
+    {
+        "name":"dining table",
+        "category":"table",
+        "price":"$950.00",
+        "image":p5
+    },
+];

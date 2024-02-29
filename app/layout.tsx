@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-full">
+        <div className="">
           <Navbar />
-          {children}
+          <div className="w-full min-h-[90vh]">{children}</div>
           <Footer />
         </div>
       </body>

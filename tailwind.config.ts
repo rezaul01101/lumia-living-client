@@ -15,7 +15,8 @@ const config: Config = {
       },
       colors:{
         'lumiaPrimary':{
-            600:"#689a37"
+            600:"#689a37",
+            400:"#689a378c",
         }
       },
     },

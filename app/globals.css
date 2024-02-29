@@ -5,3 +5,8 @@
 .menu li{
     position: relative;
 }
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+}

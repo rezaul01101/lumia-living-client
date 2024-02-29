@@ -2,30 +2,43 @@
 import React, { useEffect, useState } from "react";
 import logo from "@/public/img/logo-transparent.png";
 import Image from "next/image";
-import { FiHome,FiMail,FiShoppingCart} from "react-icons/fi";
-import { AiOutlineUser,AiOutlineShopping } from "react-icons/ai";;
+import { FiHome, FiMail, FiShoppingCart } from "react-icons/fi";
+import { AiOutlineUser, AiOutlineShopping } from "react-icons/ai";
+import Link from "next/link";
 
 function Navbar() {
-  const [stickyActive,setStickyActive]=useState<boolean>(false);
-  useEffect(()=>{
-    const scrollActive=()=>{
-      setStickyActive( window.scrollY > 20 );
-    }
-    window.addEventListener("scroll",scrollActive);
-    return ()=>window.removeEventListener("scroll",scrollActive);
-  },[stickyActive]);
+  const menuItems = [
+    { id: 1, label: "Home", url: "/" },
+    { id: 2, label: "About", url: "/about" },
+    { id: 3, label: "Furniture", url: "/furniture" },
+    { id: 4, label: "Contact", url: "/contact" },
+  ];
+
+  const [stickyActive, setStickyActive] = useState<boolean>(false);
+  useEffect(() => {
+    const scrollActive = () => {
+      setStickyActive(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", scrollActive);
+    return () => window.removeEventListener("scroll", scrollActive);
+  }, [stickyActive]);
   return (
-    <div className={`${stickyActive?"shadow-lg bg-[#eeeeee]":"bg-[#eeeeee71]"} w-full sm:px-10 px-5 mx-auto flex items-center h-[68px] fixed justify-between z-[100]`}>
+    <div
+      className={`${
+        stickyActive ? "shadow-lg bg-[#eeeeee]" : "bg-[#eeeeee71]"
+      } nav w-full sm:px-10 px-5 mx-auto flex items-center h-[68px] fixed justify-between z-[100]`}
+    >
       <div className="logo flex gap-2 items-center	">
         <Image src={logo} width={60} height={60} alt="logo" />
         <h4 className="mt-2 font-semibold">LUMIA LIVING FURNITURE</h4>
       </div>
       <div className="menu">
-        <ul className="sm:flex gap-6 mt-2 font-semibold hidden">
-          <li className="cursor-pointer text-lumiaPrimary-600 ">Home</li>
-          <li className="cursor-pointer hover:text-lumiaPrimary-600">About</li>
-          <li className="cursor-pointer hover:text-lumiaPrimary-600">Furniture</li>
-          <li className="cursor-pointer hover:text-lumiaPrimary-600">Contact</li>
+        <ul className="sm:flex gap-6 mt-2 font-semibold hidden ">
+          {menuItems.map((item, index) => (
+            <li className="cursor-pointer ">
+              <Link href={item.url}>{item.label}</Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="menu-right">
@@ -34,20 +47,26 @@ function Navbar() {
       <div className="sm:hidden fixed bottom-0 left-0 w-full">
         <div className="grid grid-cols-4 w-full bg-white h-[55px] items-center justify-between">
           <div className="h-[45px] flex flex-col items-center justify-center text-lumiaPrimary-600">
-            <FiHome className="text-[50px]"/>
-            <p className="text-sm">Home</p>
+            <FiHome className="text-[50px]" />
+            <p className="text-sm">
+              <Link href={"/"}>Home</Link>
+            </p>
           </div>
           <div className="h-[45px]  flex flex-col items-center justify-center">
-            <FiShoppingCart className="text-[50px]"/>
+            <FiShoppingCart className="text-[50px]" />
             <p className="text-sm">Cart</p>
           </div>
           <div className="h-[45px] flex flex-col items-center justify-center">
-            <AiOutlineShopping className="text-[50px]"/>
-            <p className="text-sm">Shop</p>
+            <AiOutlineShopping className="text-[50px]" />
+            <p className="text-sm">
+              <Link href={"/furniture"}>Shop</Link>
+            </p>
           </div>
           <div className="h-[45px] flex flex-col items-center justify-center">
-            <FiMail className="text-[50px]"/>
-            <p className="text-sm">Contact</p>
+            <FiMail className="text-[50px]" />
+            <p className="text-sm">
+              <Link href={"/contact"}>Contact</Link>
+            </p>
           </div>
         </div>
       </div>
