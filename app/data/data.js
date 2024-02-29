@@ -7,6 +7,12 @@ import p3 from '@/public/img/furniture/p3.avif'
 import p4 from '@/public/img/furniture/p4.avif'
 import p5 from '@/public/img/furniture/p5.avif'
 import p6 from '@/public/img/furniture/p6.avif'
+import team1 from '@/public/img/team1.jpg'
+import team2 from '@/public/img/team2.jpg'
+import team3 from '@/public/img/team3.jpg'
+import team4 from '@/public/img/team4.jpg'
+import team5 from '@/public/img/team5.jpg'
+import { TbHexagonNumber2 } from 'react-icons/tb'
 export const furniture=[
     {
         "name":"Modern Furniture",
@@ -119,3 +125,31 @@ export const Products=[
         "image":p5
     },
 ];
+
+export const Teams =[
+    {
+        'name':'Alex Grey',
+        'designation':'CEO, Director',
+        "image":team1,
+    },
+    {
+        'name':'Ashton Kutshe',
+        'designation':'Entrepreneur & Author',
+        "image":team2
+    },
+    {
+        'name':'Belinda Bing',
+        'designation':'Former COO Shopee',
+        "image":team3
+    },
+    {
+        'name':'John Ferris',
+        'designation':'Developer & Investor',
+        "image":team4
+    },
+    {
+        'name':'Camille Alforque',
+        'designation':'Chief Creative officer',
+        "image":team5
+    },
+]

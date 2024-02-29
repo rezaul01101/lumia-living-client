@@ -11,7 +11,7 @@ export default function Home() {
     <main className="overflow-hidden	">
       <Hero />
       <div className="container mx-auto my-4">
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-4 px-3">
           {furniture.map((item, index) =>
             index == 0 ? (
               <div

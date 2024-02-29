@@ -6,7 +6,7 @@ interface ProductProps{
 const Product:React.FC<ProductProps> =({item})=>{
   return (
     <div
-      className="product relative w-full h-[450px] overflow-hidden rounded-lg bg-cover bg-center"
+      className="product relative w-full sm:h-[450px] h-[350px] overflow-hidden rounded-lg bg-cover bg-center"
       style={{ backgroundImage: `url('${item.image.src}')` }}
     >
       <div className="absolute bottom-4 left-4">
