@@ -23,8 +23,8 @@ browse http://localhost:3000/
 ## Screenshots
 <table>
   <tr>
-    <td><img src="https://github.com/rezaul01101/lumia-living-client/blob/main/public/screenshot/s1.png?raw=true" width=100%></td>
-    <td><img src="https://github.com/rezaul01101/lumia-living-client/blob/main/public/screenshot/s2.png?raw=true" width=100%></td>
+    <td><img src="https://github.com/rezaul01101/lumia-living-client/blob/main/public/screenshot/s1.png?raw=true" width=50%></td>
+    <td><img src="https://github.com/rezaul01101/lumia-living-client/blob/main/public/screenshot/s2.png?raw=true" width=50%></td>
   </tr>
  </table>
 
