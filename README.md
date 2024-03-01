@@ -24,7 +24,7 @@ browse http://localhost:3000/
 <table>
   <tr>
     <td><img src="https://github.com/rezaul01101/lumia-living-client/blob/main/public/screenshot/s1.png?raw=true" width=50%></td>
-    <td><img src="https://github.com/rezaul01101/lumia-living-client/blob/main/public/screenshot/s2.png?raw=true" width=50%></td>
+    <td><img src="https://github.com/rezaul01101/lumia-living-client/blob/main/public/screenshot/s2.png?raw=true" width=100%></td>
   </tr>
  </table>
 
