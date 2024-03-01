@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 
 const Navbar=()=> {
   const path=usePathname();
-  console.log(path);
+
   const menuItems = [
     { id: 1, label: "Home", url: "/" },
     { id: 2, label: "About", url: "/about" },
@@ -47,6 +47,8 @@ const Navbar=()=> {
       <div className="menu-right">
         <AiOutlineUser className="text-xl cursor-pointer" />
       </div>
+
+      {/* mobile bottom navigation bar */}
       <div className="sm:hidden fixed bottom-0 left-0 w-full">
         <div className="grid grid-cols-4 w-full bg-white h-[55px] items-center justify-between">
           <div className={`h-[45px] flex flex-col items-center justify-center  ${path == '/' ? "text-lumiaPrimary-600" : ""}`}>
