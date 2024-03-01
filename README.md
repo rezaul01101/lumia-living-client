@@ -20,11 +20,10 @@ Welcome to the Furniture Project Frontend repository! This project is a frontend
 
 browse http://localhost:3000/
 
-## Contributing
+## Screenshots
 
-Contributions are always welcome!
+![App Screenshot](https://github.com/rezaul01101/lumia-living-client/blob/main/public/screenshot/s1.png?raw=true)
 
-See `contributing.md` for ways to get started.
 
-Please adhere to this project's `code of conduct`.
+![App Screenshot](https://github.com/rezaul01101/lumia-living-client/blob/main/public/screenshot/s2.png?raw=true)
 
